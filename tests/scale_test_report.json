@@ -1,0 +1,50 @@
+{
+  "total": 1336,
+  "passed": 1336,
+  "failed": 0,
+  "pass_rate": "100.00%",
+  "by_section": {
+    "S1 写入压力 (200)": {
+      "passed": 200,
+      "failed": 0
+    },
+    "S2 去重矩阵 (100)": {
+      "passed": 100,
+      "failed": 0
+    },
+    "S3 FTS 检索参数化 (500)": {
+      "passed": 500,
+      "failed": 0
+    },
+    "S4 权限矩阵 (36)": {
+      "passed": 36,
+      "failed": 0
+    },
+    "S5 提取容错 (100)": {
+      "passed": 100,
+      "failed": 0
+    },
+    "S6 治理压力 (50)": {
+      "passed": 50,
+      "failed": 0
+    },
+    "S7 Embedder 参数化 (100)": {
+      "passed": 100,
+      "failed": 0
+    },
+    "S8 并发安全 (50)": {
+      "passed": 50,
+      "failed": 0
+    },
+    "S9 数据边界 (100)": {
+      "passed": 100,
+      "failed": 0
+    },
+    "S10 召回率回归 (100 QA)": {
+      "passed": 100,
+      "failed": 0
+    }
+  },
+  "errors": [],
+  "elapsed_s": 37.78
+}

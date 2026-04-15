@@ -1,0 +1,481 @@
+{
+  "meta": {
+    "meetings": 6,
+    "search_qa": 12,
+    "permission_cases": 10,
+    "elapsed_s": 1.87
+  },
+  "sections": {
+    "E1": {
+      "section": "E1 自动提取准确率",
+      "n": 6,
+      "write_success_rate": 1.0,
+      "decision_f1": 1.0,
+      "task_f1": 0.0,
+      "owner_match_rate": 1.0,
+      "details": [
+        {
+          "meeting_id": "M1",
+          "topic": "PriceEngine v2 灰度方案评审",
+          "wrote_ok": true,
+          "decision_f1": 1.0,
+          "task_f1": 0.0,
+          "owner_match": true
+        },
+        {
+          "meeting_id": "M2",
+          "topic": "PriceEngine v2 灰度扩量决策",
+          "wrote_ok": true,
+          "decision_f1": 1.0,
+          "task_f1": 0.0,
+          "owner_match": true
+        },
+        {
+          "meeting_id": "M3",
+          "topic": "PriceEngine v2 离线效果评估",
+          "wrote_ok": true,
+          "decision_f1": 1.0,
+          "task_f1": 0.0,
+          "owner_match": true
+        },
+        {
+          "meeting_id": "M4",
+          "topic": "PriceEngine SDK 性能优化",
+          "wrote_ok": true,
+          "decision_f1": 1.0,
+          "task_f1": 0.0,
+          "owner_match": true
+        },
+        {
+          "meeting_id": "M5",
+          "topic": "PriceEngine 模型蒸馏实验进展",
+          "wrote_ok": true,
+          "decision_f1": 1.0,
+          "task_f1": 0.0,
+          "owner_match": true
+        },
+        {
+          "meeting_id": "M6",
+          "topic": "PriceEngine v2 全量发布评审",
+          "wrote_ok": true,
+          "decision_f1": 1.0,
+          "task_f1": 0.0,
+          "owner_match": true
+        }
+      ],
+      "pass": true
+    },
+    "E2": {
+      "section": "E2 跨人协作检索召回",
+      "n": 12,
+      "avg_recall": {
+        "R@1": 0.75,
+        "R@3": 0.8333333333333334,
+        "R@5": 0.8333333333333334
+      },
+      "avg_latency_ms": 0.5413393179575602,
+      "pass_rate": 0.9166666666666666,
+      "by_category": {
+        "跨人检索": {
+          "n": 7,
+          "R@3": 0.8571428571428571
+        },
+        "决策检索": {
+          "n": 3,
+          "R@3": 0.6666666666666666
+        },
+        "人员检索": {
+          "n": 2,
+          "R@3": 1.0
+        }
+      },
+      "details": [
+        {
+          "id": "Q1",
+          "category": "跨人检索",
+          "query": "灰度",
+          "caller": "carol",
+          "found_n": 4,
+          "latency_ms": 0.5869194865226746,
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "pass": true
+        },
+        {
+          "id": "Q2",
+          "category": "跨人检索",
+          "query": "扩量",
+          "caller": "carol",
+          "found_n": 2,
+          "latency_ms": 0.5297958850860596,
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "pass": true
+        },
+        {
+          "id": "Q3",
+          "category": "跨人检索",
+          "query": "熔断",
+          "caller": "carol",
+          "found_n": 2,
+          "latency_ms": 0.5247816443443298,
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "pass": true
+        },
+        {
+          "id": "Q4",
+          "category": "跨人检索",
+          "query": "分层定价",
+          "caller": "eve",
+          "found_n": 0,
+          "latency_ms": 0.45833736658096313,
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0
+          },
+          "pass": false
+        },
+        {
+          "id": "Q5",
+          "category": "跨人检索",
+          "query": "蒸馏",
+          "caller": "carol",
+          "found_n": 2,
+          "latency_ms": 0.5180314183235168,
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "pass": true
+        },
+        {
+          "id": "Q6",
+          "category": "跨人检索",
+          "query": "SDK",
+          "caller": "alice",
+          "found_n": 3,
+          "latency_ms": 0.5157217383384705,
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "pass": true
+        },
+        {
+          "id": "Q7",
+          "category": "跨人检索",
+          "query": "全量发布",
+          "caller": "grace",
+          "found_n": 2,
+          "latency_ms": 0.510871410369873,
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "pass": true
+        },
+        {
+          "id": "Q8",
+          "category": "决策检索",
+          "query": "蒸馏",
+          "caller": "carol",
+          "found_n": 2,
+          "latency_ms": 0.49107521772384644,
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "pass": true
+        },
+        {
+          "id": "Q9",
+          "category": "决策检索",
+          "query": "懒加载",
+          "caller": "carol",
+          "found_n": 2,
+          "latency_ms": 0.5059093236923218,
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5
+          },
+          "pass": true
+        },
+        {
+          "id": "Q10",
+          "category": "决策检索",
+          "query": "回滚",
+          "caller": "carol",
+          "found_n": 2,
+          "latency_ms": 0.49680471420288086,
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5
+          },
+          "pass": true
+        },
+        {
+          "id": "Q11",
+          "category": "人员检索",
+          "query": "产品运营",
+          "caller": "alice",
+          "found_n": 5,
+          "latency_ms": 0.7118359208106995,
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "pass": true
+        },
+        {
+          "id": "Q12",
+          "category": "人员检索",
+          "query": "数据洞察",
+          "caller": "alice",
+          "found_n": 3,
+          "latency_ms": 0.6459876894950867,
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0
+          },
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "E3": {
+      "section": "E3 知识图谱检索命中率",
+      "n": 3,
+      "avg_person_recall": 0.6666666666666666,
+      "decision_hit_rate": 0.6666666666666666,
+      "pass_rate": 0.6666666666666666,
+      "details": [
+        {
+          "query": "灰度",
+          "caller": "david",
+          "total_hits": 0,
+          "entity_count": 0,
+          "person_recall": 0.0,
+          "decision_hit": false,
+          "latency_ms": 0.4765614867210388,
+          "pass": false
+        },
+        {
+          "query": "灰度",
+          "caller": "carol",
+          "total_hits": 9,
+          "entity_count": 50,
+          "person_recall": 1.0,
+          "decision_hit": true,
+          "latency_ms": 2.1770820021629333,
+          "pass": true
+        },
+        {
+          "query": "蒸馏",
+          "caller": "grace",
+          "total_hits": 7,
+          "entity_count": 50,
+          "person_recall": 1.0,
+          "decision_hit": true,
+          "latency_ms": 1.7783939838409424,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "E4": {
+      "section": "E4 长程时序检索",
+      "n": 4,
+      "pass_rate": 1.0,
+      "details": [
+        {
+          "case": "days=90 全量检索",
+          "query": "灰度",
+          "found": 4,
+          "expected_min": 1,
+          "pass": true
+        },
+        {
+          "case": "type_filter=conversation",
+          "query": "灰度",
+          "found": 4,
+          "all_correct_type": true,
+          "pass": true
+        },
+        {
+          "case": "type_filter=event（tag: 里程碑）",
+          "query": "里程碑",
+          "found": 1,
+          "all_correct_type": true,
+          "pass": true
+        },
+        {
+          "case": "精确关键词命中 QualityScore document",
+          "query": "QualityScore",
+          "found": 1,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "E5": {
+      "section": "E5 权限隔离准确率",
+      "n": 10,
+      "pass_rate": 1.0,
+      "details": [
+        {
+          "desc": "owner 自己可见 private",
+          "owner": "alice",
+          "visibility": "private",
+          "caller": "alice",
+          "should_find": true,
+          "actually_found": true,
+          "pass": true
+        },
+        {
+          "desc": "同部门非 owner 不可见 private",
+          "owner": "alice",
+          "visibility": "private",
+          "caller": "carol",
+          "should_find": false,
+          "actually_found": false,
+          "pass": true
+        },
+        {
+          "desc": "跨部门不可见 private",
+          "owner": "alice",
+          "visibility": "private",
+          "caller": "bob",
+          "should_find": false,
+          "actually_found": false,
+          "pass": true
+        },
+        {
+          "desc": "owner 可见 team",
+          "owner": "alice",
+          "visibility": "team",
+          "caller": "alice",
+          "should_find": true,
+          "actually_found": true,
+          "pass": true
+        },
+        {
+          "desc": "同部门可见 team",
+          "owner": "alice",
+          "visibility": "team",
+          "caller": "carol",
+          "should_find": true,
+          "actually_found": true,
+          "pass": true
+        },
+        {
+          "desc": "跨部门不可见 team",
+          "owner": "alice",
+          "visibility": "team",
+          "caller": "bob",
+          "should_find": false,
+          "actually_found": false,
+          "pass": true
+        },
+        {
+          "desc": "public 自己可见",
+          "owner": "alice",
+          "visibility": "public",
+          "caller": "alice",
+          "should_find": true,
+          "actually_found": true,
+          "pass": true
+        },
+        {
+          "desc": "public 同部门可见",
+          "owner": "alice",
+          "visibility": "public",
+          "caller": "carol",
+          "should_find": true,
+          "actually_found": true,
+          "pass": true
+        },
+        {
+          "desc": "public 跨部门可见",
+          "owner": "alice",
+          "visibility": "public",
+          "caller": "bob",
+          "should_find": true,
+          "actually_found": true,
+          "pass": true
+        },
+        {
+          "desc": "public 任意部门可见",
+          "owner": "alice",
+          "visibility": "public",
+          "caller": "david",
+          "should_find": true,
+          "actually_found": true,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "E6": {
+      "section": "E6 去重效果",
+      "n": 3,
+      "pass_rate": 1.0,
+      "details": [
+        {
+          "desc": "完全相同 content dict",
+          "expect_dup": true,
+          "got_dup": true,
+          "pass": true
+        },
+        {
+          "desc": "相同 summary 不同 key",
+          "expect_dup": false,
+          "got_dup": false,
+          "pass": true
+        },
+        {
+          "desc": "完全不同 content",
+          "expect_dup": false,
+          "got_dup": false,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "E7": {
+      "section": "E7 性能基准",
+      "write": {
+        "n": 100,
+        "p50_ms": 12.8,
+        "p99_ms": 25.55,
+        "avg_ms": 13.76
+      },
+      "search": {
+        "n": 200,
+        "p50_ms": 0.49,
+        "p99_ms": 0.66,
+        "avg_ms": 0.46
+      },
+      "pass": true
+    }
+  },
+  "overall_pass": true
+}

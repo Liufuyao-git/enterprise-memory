@@ -1,0 +1,31 @@
+storage:
+  backend: sqlite          # sqlite | chromadb
+  db_path: ~/.openclaw/workspace/memory_engine/memories.db
+  embeddings_path: ~/.openclaw/workspace/memory_engine/embeddings/
+
+retention:
+  fresh_days: 7
+  active_days: 30
+  archive_days: 90
+
+extraction:
+  auto_extract: true       # 跨部门会话后自动触发
+  min_participants: 2      # 触发自动提取的最少参与人数
+  llm_model: default       # 使用 OpenClaw 默认模型
+
+multi_user:
+  enabled: true
+  default_visibility: team
+
+search:
+  hybrid_alpha: 0.6        # 语义权重（1-alpha 为关键词权重）
+  top_k: 10
+  time_decay: true         # 新记忆权重更高
+  context_window: 1        # 向量编码上下文扩展：前后各1条 turn
+  query_preprocess: true   # 是否启用 query 停用词过滤
+
+# 知识图谱配置
+graph:
+  enabled: true            # 写入时自动构建图谱
+  max_hops: 2              # 图检索默认最大跳数
+  max_nodes: 50            # BFS 扩展节点上限
